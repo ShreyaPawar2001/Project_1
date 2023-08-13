@@ -1,0 +1,167 @@
+<button  mat-raised-button color="primary" (click)="hotelDetails()">Hotel Details</button> &nbsp;
+<!--  Registration form -->
+<div class="form-container" *ngIf="!showTable">
+  <form [formGroup]="bookingForm!" class="centered-form">
+    <div class="grid-container">
+      <p>
+        <mat-form-field appearance="outline">
+          <mat-label class="input1">OwnerName</mat-label>
+          <input matInput placeholder="Placeholder" formControlName="ownername"/>
+          <mat-hint>Hint</mat-hint>
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="outline">
+          <mat-label class="input1">OwnerContact</mat-label>
+          <input matInput placeholder="Placeholder" formControlName="ownercontact"/>
+          <mat-hint>Hint</mat-hint>
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="outline">
+          <mat-label class="input1">HotelName</mat-label>
+          <input matInput placeholder="Placeholder" formControlName="hotelname"/>
+          <mat-hint>Hint</mat-hint>
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="outline">
+          <mat-label class="input1">HotelAddress</mat-label>
+          <input matInput placeholder="Placeholder"  formControlName="hoteladdress"/>
+          <mat-hint>Hint</mat-hint>
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="outline">
+          <mat-label class="input1">HotelContact</mat-label>
+          <input matInput placeholder="Placeholder" formControlName="hotelcontact"/>
+          <mat-hint>Hint</mat-hint>
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="outline">
+          <mat-label class="input1">hotelMenu</mat-label>
+          <input matInput placeholder="Placeholder" formControlName="hotelmenu"/>
+          <mat-hint>Hint</mat-hint>
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="outline">
+          <mat-label class="input1">RommsAvailable</mat-label>
+          <input matInput placeholder="Placeholder" formControlName="rommsavailable"/>
+          <mat-hint>Hint</mat-hint>
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="outline">
+          <mat-label class="input1">OwnerPassword</mat-label>
+          <input matInput placeholder="Placeholder" formControlName="ownerpassword"/>
+          <mat-hint>Hint</mat-hint>
+        </mat-form-field>
+      </p>
+      <button mat-raised-button style="height: 50px"(click)="onSubmitBooking()"type="submit"class="w-100 bg-secondary text-white">
+        SubmitDetail
+      </button>
+    </div>
+  </form>
+</div>
+
+
+
+  <!-- hotel Details cards on ownwesucess -->
+
+
+  <!-- <div class="table-container" *ngIf="showTable">
+    <div class="container p-1">
+      <div class="row">
+        <div class="col-10">
+          <div
+            class="d-flex justify-content-center"
+            role="search"
+            class="search-container"
+          >
+            <input
+              class="form-control me-2 w-50"
+              type="text"
+              placeholder="Search"
+              [(ngModel)]="inputVal"
+              aria-label="Search"
+            />
+           
+          </div>
+        </div>
+        <div class="col-1"></div>
+        
+        <div class="hotel-card-container">
+          <div
+            class="card mb-3"
+            style="max-width: 100%; max-height: 200px"
+            *ngFor="let hotelData of userHotelDetails | searchValue:inputVal "
+          >
+            <div class="row g-0">
+              <div class="col-md-6 mt-2">
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <span class="me-5">{{ hotelData.OwnerName }}</span>
+                  </h5>
+                  <span class="ms-3"
+                    ><i class="bi bi-star"></i> {{ hotelData.OwnerContact }}</span
+                  >
+                  <p class="card-text">
+                    <span
+                      ><h5>
+                        <i class="bi bi-geo-alt"></i>{{ hotelData.HotelName }}
+                      </h5></span
+                    >
+                  </p>
+                  <p class="mb-0">
+                    <small class="text-muted">{{ hotelData.HotelAddress }}</small>
+                  </p>
+                  <p class="mt-0">
+                    <small class="text-muted">{{ hotelData.HotelContact }}</small>
+                  </p>
+                  <p class="mt-0">
+                    <small class="text-muted">{{ hotelData.hotelMenu }}</small>
+                  </p>
+                  <mat-icon (click)="deleteHotel(hotelData.id)" class="delete"
+                    >delete</mat-icon
+                  >
+                  <mat-icon (click)="editHotel(hotelData.id)" class="edit"
+                    >mode_edit</mat-icon
+                  >
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+
+  
+<div class="table-container" *ngIf="showTable">
+  <div class="container p-1s">
+    <div class="row">
+      <div class="hotel-card-container">
+        <div class="col-md-3" *ngFor="let hotelData of userHotelDetails | searchValue:inputVal">
+          <div class="card mb-3">
+            <div class="card-body">
+              <h5 class="card-title"><span class="me-5">{{ hotelData.HotelName }}</span></h5>
+              <p class="card-text"><span class="ms-3">
+                <i class="bi bi-star"></i> {{ hotelData.OwnerContact }}</span></p>
+                <p class="card-text"><span><h5><i class="bi bi-geo-alt"></i>{{ hotelData.HotelAddress }}
+                </h5></span></p>
+                <p class="card-text">{{ hotelData.OwnerName }}</p>
+                <p class="card-text">{{ hotelData.HotelContact }}</p>
+                <mat-icon (click)="deleteHotel(hotelData.id)" class="delete">delete</mat-icon>
+                <mat-icon (click)="editHotel(hotelData.id)" class="edit">mode_edit</mat-icon>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

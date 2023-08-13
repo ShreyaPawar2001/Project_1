@@ -1,0 +1,55 @@
+<button class="admin" (click)="journey('admin')">
+  Admin
+</button>
+&nbsp; <button class="owner" (click)="journey('owner')">Owner</button> &nbsp;
+<button class="user" (click)="journey('user')">User</button>&nbsp;
+
+<div class="background-container"  autoplay muted loop>
+  <div class="background-image image1"></div>
+  <div class="background-image image2"></div>
+  <div class="background-image image3"></div>
+</div>
+
+<button  mat-raised-button color="primary" (click)="hotelDetails()">Hotel Details</button> &nbsp;
+<div  class="table-container"  >
+  <div class="container p-1" *ngIf="userHotelDetails.length > 0 && showTable" >
+    <div class="row">
+      <div class="col-10">
+        <div class="d-flex justify-content-center"role="search"class="search-container">
+          <input class="form-control me-2 w-50"type="text"placeholder="Search" [(ngModel)]="inputVal "aria-label="Search"/>
+        </div>
+      </div>
+      <div class="col-1"></div>
+      <div class="hotel-card-container">
+        <div class="card mb-3"style="max-width: 100%; max-height: 200px" *ngFor="let hotelData of userHotelDetails | searchValue:inputVal">
+          <div class="row g-0">
+            <div class="col-md-4 p-1">
+              <img src="../../../assets/videos/image.jpg" width="225px" class="img-fluid rounded-start" alt="hotel">
+            </div>
+            <div class="col-md-6 mt-2">
+              <div class="card-body">
+                <h5 class="card-title">
+                  <span class="me-5">{{ hotelData.hotelName }}</span>
+                </h5>
+                <span class="ms-3"><i class="bi bi-star"></i>{{ hotelData.rating }}</span>
+                <p class="card-text">
+                  <span><h5><i class="bi bi-geo-alt"></i>{{ hotelData.price }}</h5></span>
+                </p>
+                <p class="mb-0"><small class="text-muted">{{ hotelData.roomSiz }}</small></p>
+                <p class="mt-0"><small class="text-muted">{{ hotelData.roomDis }}</small></p>
+                <p class="mt-0"><small class="text-muted">{{ hotelData.address }}</small></p>
+                <button class="bookNow" mat-raised-button color="primary" >Book Now</button> 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    
+
+    
+    
+      
+  </div>

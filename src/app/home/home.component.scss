@@ -1,0 +1,71 @@
+.navbar {
+    height: 86px;
+    z-index: 1;
+    background-color: #333333;
+    font-family: Verdana, Geneva, sans-serif;
+    position: relative;
+    bottom: 89px;
+   
+    // box-shadow: 0 2px 4px rgba(203, 195, 195, 0.1);
+   
+
+}
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+  }
+
+.heading{
+    position: absolute;
+    top: 16px;
+    font-size: 28px;
+    padding: 9px;
+    color:  #F5F5F5;
+    z-index: 1;
+    
+    // rgb(55, 49, 49);
+    // background: linear-gradient(
+    //         to right,#e3dada,#474343 );
+    //         border-radius: 7px;
+
+}
+.admin{
+    position: relative;
+    left: 268px;
+    bottom: 154px;
+    border-radius: 40px;
+    width: 138px;
+    padding: 9px;
+    z-index: 1;
+    color: #696969;
+}
+.owner{
+    position: relative;
+    left: 286px;
+    bottom: 154px;
+    border-radius: 40px;
+    width: 138px;
+    padding: 9px;
+    z-index: 1;
+    color: #696969;
+
+}
+.user{
+    position: relative;
+    left: 308px;
+    bottom: 154px;
+    border-radius: 40px;
+    width: 138px;
+    padding: 9px;
+    z-index: 1;
+    color: #696969;
+}
+.logout{
+    position: relative;
+    left: 361px;
+    bottom: 64px;
+    z-index: 1;
+}

@@ -1,0 +1,76 @@
+<div>
+  <h2 class="heading">King the Land</h2>
+
+  <button class="admin" (click)="journey('admin')">Admin</button> &nbsp;
+  <button class="owner" (click)="journey('owner')">Owner</button> &nbsp;
+  <button class="user" (click)="journey('user')">User</button>&nbsp;
+</div>
+
+<div class="background-container" autoplay muted loop>
+  <div class="background-image image1"></div>
+  <div class="background-image image2"></div>
+  <div class="background-image image2"></div>
+</div>
+
+<div
+  class="container mt-1 pt-2 pb-1 rounded px-3 bg-light"
+  style="width: 440px"
+>
+  <!-- <div class="text-center">
+    <img
+      src="../../../assets/videos/admin.png"
+      height="70px"
+      width="110px"
+      alt="owner-log"
+    />
+  </div> -->
+  <h2 class="text-center">Admin sign up</h2>
+
+  <!-- <div class="card-container"> -->
+  <form [formGroup]="signupForm!" class="form-container">
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label class="input1">Name</mat-label>
+        <input matInput placeholder="Placeholder" formControlName="name" />
+        <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+        <mat-hint>Hint</mat-hint>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="Placeholder" formControlName="email" />
+        <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+        <mat-hint>Hint</mat-hint>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Contact</mat-label>
+        <input matInput placeholder="Placeholder" formControlName="contact" />
+        <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+        <mat-hint>Hint</mat-hint>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Password</mat-label>
+        <input matInput placeholder="Placeholder" formControlName="password" />
+        <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+        <mat-hint>Hint</mat-hint>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Gender</mat-label>
+        <input matInput placeholder="Placeholder" formControlName="gender" />
+        <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+        <mat-hint>Hint</mat-hint>
+      </mat-form-field>
+    </p>
+    <button mat-raised-button style="height: 50px"(click)="onSubmitSignup()"type="submit"class="w-100 bg-secondary text-white">
+      Submit
+    </button>
+  </form>
+</div>
+

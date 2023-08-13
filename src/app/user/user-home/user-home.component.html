@@ -1,0 +1,36 @@
+<h2 class="heading">King the Land</h2>
+<button class="admin" (click)="journey('admin')">
+  <!-- <i class="bi bi-person-circle"></i> -->
+  Admin
+</button>
+&nbsp; <button class="owner" (click)="journey('owner')">Owner</button> &nbsp;
+<button class="user" (click)="journey('user')">User</button>&nbsp;
+
+<div class="background-container"  autoplay muted loop>
+  <div class="background-image image1"></div>
+  <div class="background-image image2"></div>
+  <div class="background-image image3"></div>
+</div>
+
+<div class="container" style="width: 450px; padding-top: 30px">
+  <div class="text-center">
+    <img src="../../../assets/videos/user.png"height="70px"width="110px"alt="owner-log"/>
+  </div>
+  <h2 class="text-center">User Login</h2>
+  <form style="margin-top: 30px" [formGroup]="loginForm!">
+    <div class="mb-3">
+      <input type="text"formControlName="name"class="form-control"placeholder="User Name"id="uname"name="uname" ngModel style="height: 50px"/>
+    </div>
+    <div class="mb-3">
+      <input type="text"formControlName="password"class="form-control"placeholder="Password"id="password"name="password" ngModel style="height: 50px"autocomplete="off"/>
+    </div>
+    <button mat-raised-button style="height: 50px"type="submit"(click)="onSubmitlogin()"class="w-100 bg-secondary text-white">
+      Submit
+    </button>
+    
+    <div class="text-center mt-2">
+      <span class="text-white me-3" style="text-decoration: underline">Forgotten account?</span>
+      <span class="text-white"style="text-decoration: underline"routerLink="/user/userSignup">Sign up as owner</span>
+    </div>
+  </form>
+</div>

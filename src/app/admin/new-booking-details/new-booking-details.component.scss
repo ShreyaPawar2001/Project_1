@@ -1,0 +1,25 @@
+/* Add these styles in your component's CSS file or in a global styles file */
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* This will make the container take the full height of the viewport */
+  }
+  
+  .centered-form {
+    max-width: 473px; /* Adjust the max-width as needed */
+    width: 100%;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    position: relative;
+    bottom: 142px;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Creates a 2x2 grid */
+    gap: 10px; /* Adjust the gap between grid items */
+  }
+  

@@ -1,0 +1,133 @@
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.background-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background-size: cover;
+  animation: fadeInOut 15s linear infinite;
+}
+.image1 {
+  background-image: url('/assets/videos/loginImage_1.jpeg');
+}
+
+.image2 {
+  background-image: url('/assets/videos/image.jpg');
+  animation-delay: 5s;
+}
+
+.image3 {
+  background-image: url('/assets/videos/imageLogin_4.jpg');
+  animation-delay: 5s;
+}
+
+@keyframes fadeInOut {
+  0%, 100% { opacity: 0; }
+  20%, 80% { opacity: 1; }
+}
+
+
+
+
+
+
+/* Center the card on the page */
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust this value if needed */
+  }
+  
+  /* Add styles to the form container (card) */
+  .form-container {
+    
+    width: 80%;
+    max-width: 400px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  mat-form-field {
+    width: 100%; /* Set the width of the form fields to 100% */
+  }
+  
+mat-input-element {
+  font-size: 16px; /* Increase the font size of the input fields */
+  padding: 10px; /* Add padding to improve appearance */
+}
+.card-container{
+  position: relative;
+  bottom: 120px;
+}
+.heading{
+  position: absolute;
+  top: 16px;
+  font-size: 28px;
+  padding: 9px;
+  color:  #F5F5F5;
+  z-index: 1;
+  
+  // rgb(55, 49, 49);
+  // background: linear-gradient(
+  //         to right,#e3dada,#474343 );
+  //         border-radius: 7px;
+
+}
+
+.admin{
+  position: relative;
+  left: 1200px;
+  bottom: 67px;
+  border-radius: 40px;
+  width: 138px;
+  padding: 9px;
+  z-index: 1;
+  color: #696969;
+ 
+}
+.owner{
+  position: relative;
+  left:1215px;
+  bottom: 67px;
+  border-radius: 40px;
+  width: 138px;
+  padding: 9px;
+  z-index: 1;
+  color: #696969;
+
+}
+.user{
+  position: relative;
+  left: 1228px;
+  bottom: 67px;
+  border-radius: 40px;
+  width: 138px;
+  padding: 9px;
+  z-index: 1;
+  color: #696969;
+}
+  
+  
+  
+  
+  

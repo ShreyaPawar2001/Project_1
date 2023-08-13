@@ -1,0 +1,20 @@
+<div class="navbar" ></div>
+ 
+ <div>
+   <video autoplay muted loop id="myVideo">
+      <source src="/assets/videos/video_1.mp4" type="video/mp4">
+   </video>
+</div> 
+ 
+
+   <div>
+      <h2 class="heading">King the Land</h2> 
+ 
+<button class='admin' (click)="journey('admin')">
+   <i class="bi bi-person-fill-gear me-2 fs-3"></i>
+   Admin</button> &nbsp;
+<button class="owner" (click)="journey('owner')" > <i class="bi bi-key me-2 fs-3"></i> Owner</button> &nbsp;
+<button class="user" (click)="journey('user')"> <i class="bi bi-person-circle me-2 fs-3"></i> User</button>&nbsp;
+<button  class='logout'*ngIf="showLogout">Logout</button>
+   </div>
+

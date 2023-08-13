@@ -1,0 +1,118 @@
+<!-- <p>new-booking-details works!</p> -->
+<div class="row">
+  <div class="col-1" routerLink="/admin/adminHome" class="back-link">
+    <i class="bi bi-arrow-left-circle-fill fs-1 text-muted"></i>
+  </div>
+  <div class="form-container">
+    <form [formGroup]="bookingForm!" class="centered-form">
+      <div class="grid-container">
+        <p>
+          <mat-form-field appearance="outline">
+            <mat-label class="input1">OwnerName</mat-label>
+            <input
+              matInput
+              placeholder="Placeholder"
+              formControlName="ownername"
+            />
+            <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+            <mat-hint>Hint</mat-hint>
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field appearance="outline">
+            <mat-label class="input1">OwnerContact</mat-label>
+            <input
+              matInput
+              placeholder="Placeholder"
+              formControlName="ownercontact"
+            />
+            <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+            <mat-hint>Hint</mat-hint>
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field appearance="outline">
+            <mat-label class="input1">HotelName</mat-label>
+            <input
+              matInput
+              placeholder="Placeholder"
+              formControlName="hotelname"
+            />
+            <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+            <mat-hint>Hint</mat-hint>
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field appearance="outline">
+            <mat-label class="input1">HotelAddress</mat-label>
+            <input
+              matInput
+              placeholder="Placeholder"
+              formControlName="hoteladdress"
+            />
+            <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+            <mat-hint>Hint</mat-hint>
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field appearance="outline">
+            <mat-label class="input1">HotelContact</mat-label>
+            <input
+              matInput
+              placeholder="Placeholder"
+              formControlName="hotelcontact"
+            />
+            <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+            <mat-hint>Hint</mat-hint>
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field appearance="outline">
+            <mat-label class="input1">hotelMenu</mat-label>
+            <input
+              matInput
+              placeholder="Placeholder"
+              formControlName="hotelmenu"
+            />
+            <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+            <mat-hint>Hint</mat-hint>
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field appearance="outline">
+            <mat-label class="input1">RommsAvailable</mat-label>
+            <input
+              matInput
+              placeholder="Placeholder"
+              formControlName="rommsavailable"
+            />
+            <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+            <mat-hint>Hint</mat-hint>
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field appearance="outline">
+            <mat-label class="input1">OwnerPassword</mat-label>
+            <input
+              matInput
+              placeholder="Placeholder"
+              formControlName="ownerpassword"
+            />
+            <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+            <mat-hint>Hint</mat-hint>
+          </mat-form-field>
+        </p>
+
+        <button
+          mat-raised-button
+          style="height: 50px"
+          (click)="onSubmitBooking()"
+          type="submit"
+          class="w-100 bg-secondary text-white"
+        >
+          SubmitDetails
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
