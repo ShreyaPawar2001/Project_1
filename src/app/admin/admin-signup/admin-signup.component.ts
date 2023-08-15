@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { ApiCommonServiceService } from 'src/app/common/api-common-service.service';
 import { CommonService } from 'src/app/common/common.service';
 
-@Component({ 
+@Component({  
   selector: 'app-admin-signup',
   templateUrl: './admin-signup.component.html',
   styleUrls: ['./admin-signup.component.scss']
