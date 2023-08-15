@@ -32,8 +32,10 @@
       <mat-form-field appearance="outline">
         <mat-label class="input1">Name</mat-label>
         <input matInput placeholder="Placeholder" formControlName="name" />
+        <!-- <span *ngIf="signupForm.get('name')?.errors?.['required'] && signupForm.get('name')?.touched">Name is required</span> -->
         <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
-        <mat-hint>Hint</mat-hint>
+        <mat-error>Name is required</mat-error>
+        <!-- <mat-hint>Name is required</mat-hint> -->
       </mat-form-field>
     </p>
     <p>
@@ -41,7 +43,7 @@
         <mat-label>Email</mat-label>
         <input matInput placeholder="Placeholder" formControlName="email" />
         <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
-        <mat-hint>Hint</mat-hint>
+        <mat-error>Email is required</mat-error>
       </mat-form-field>
     </p>
     <p>
@@ -49,7 +51,7 @@
         <mat-label>Contact</mat-label>
         <input matInput placeholder="Placeholder" formControlName="contact" />
         <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
-        <mat-hint>Hint</mat-hint>
+        <mat-error>Contact is required</mat-error>
       </mat-form-field>
     </p>
     <p>
@@ -57,18 +59,23 @@
         <mat-label>Password</mat-label>
         <input matInput placeholder="Placeholder" formControlName="password" />
         <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
-        <mat-hint>Hint</mat-hint>
+        <mat-error>Password is required</mat-error>
       </mat-form-field>
     </p>
     <p>
       <mat-form-field appearance="outline">
         <mat-label>Gender</mat-label>
         <input matInput placeholder="Placeholder" formControlName="gender" />
+        <!-- <mat-radio-group formControlName="gender">
+          <mat-radio-button class="me-5 ms-5" >male</mat-radio-button>
+          <mat-radio-button value="cardPay">Female</mat-radio-button>
+          <mat-radio-button value="cardPay">Other</mat-radio-button>
+      </mat-radio-group> -->
         <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
-        <mat-hint>Hint</mat-hint>
+        <mat-error>Gender is required</mat-error>
       </mat-form-field>
     </p>
-    <button mat-raised-button style="height: 50px"(click)="onSubmitSignup()"type="submit"class="w-100 bg-secondary text-white">
+    <button mat-raised-button style="height: 50px"(click)="onSubmitSignup()"type="submit"class="w-100 bg-secondary text-white"[disabled]="signupForm.invalid">
       Submit
     </button>
   </form>

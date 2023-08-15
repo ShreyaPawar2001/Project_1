@@ -1,0 +1,132 @@
+<!-- <p>booking-form works!</p> -->
+<button class="admin" (click)="journey('admin')">
+    <!-- <i class="bi bi-person-circle"></i> -->
+    Admin
+  </button>
+  &nbsp; <button class="owner" (click)="journey('owner')">Owner</button> &nbsp;
+  <button class="user" (click)="journey('user')">User</button>&nbsp;
+  
+  <div class="background-container"  autoplay muted loop>
+    <div class="background-image image1"></div>
+    <div class="background-image image2"></div>
+    <div class="background-image image3"></div>
+  </div>
+<div class="container text-center">
+    <div class="row">
+        <div class="col-8 p-3 rounded-4 shadow-lg" style="background-color: #d9d9d9; box-sizing: border-box;">
+            <div class="text-center m-2 border-bottom border-secondary">
+                <h3>Hotel Booking Form</h3>
+            </div>
+            <form [formGroup]="bookingFormData" (ngSubmit)="onSubmit()">
+                <div class="mb-0">
+                    <mat-form-field appearance="fill" class="me-4">
+                        <mat-label>First Name</mat-label>
+                        <input matInput formControlName="fname" required>
+                        <mat-error *ngIf="bookingFormData.get('fname')?.errors?.['nospace']">No space
+                            allowed</mat-error>
+                        <mat-error *ngIf="bookingFormData.get('fname')?.errors?.['required']">You must enter a
+                            value</mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="fill" class="me-4">
+                        <mat-label>Last Name</mat-label>
+                        <input matInput formControlName="lname" required>
+                        <mat-error *ngIf="bookingFormData.get('lname')?.errors?.['nospace']">No space
+                            allowed</mat-error>
+                        <mat-error *ngIf="bookingFormData.get('lname')?.errors?.['required']">You must enter a
+                            value</mat-error>
+                    </mat-form-field>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Enter your email</mat-label>
+                        <input matInput placeholder="abc@example.com" formControlName="email" required>
+                        <mat-error *ngIf="bookingFormData.get('email')?.errors?.['email']">Invalid email</mat-error>
+                        <mat-error *ngIf="bookingFormData.get('email')?.errors?.['required']">You must enter a
+                            value</mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="mb-0">
+                    <mat-form-field hintLabel="" appearance="fill" class="me-4">
+                        <mat-label>Mobile no</mat-label>
+                        <input matInput #input maxlength="10" minlength="10" placeholder="Ex. Nougat"
+                            formControlName="mobile">
+                        <mat-error
+                            *ngIf="bookingFormData.get('mobile')?.errors?.['maxlength']?.actualLength <10 && !bookingFormData.get('mobile')?.errors?.['required']">Invalid
+                            mobile number</mat-error>
+                        <mat-error *ngIf="bookingFormData.get('mobile')?.errors?.['required']">You must enter a
+                            value</mat-error>
+                        <mat-error *ngIf="bookingFormData.get('mobile')?.errors?.['nospace']">No space
+                            allowed</mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="fill" class="me-4">
+                        <mat-label>Address</mat-label>
+                        <input matInput formControlName="address">
+                    </mat-form-field>
+                    <mat-form-field class="example-full-width">
+                        <mat-label>City</mat-label>
+                        <input matInput placeholder="Ex. San Francisco" formControlName="city">
+                    </mat-form-field>
+                </div>
+                <div class="mb-0">
+                    <mat-form-field class="example-full-width me-4">
+                        <mat-label>State</mat-label>
+                        <input matInput placeholder="Ex. California" formControlName="state">
+                    </mat-form-field>
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Postal Code</mat-label>
+                        <input matInput #postalCode maxlength="6" placeholder="Ex. 431605" formControlName="pin">
+                    </mat-form-field>
+                </div>
+
+                <div class="mb-0 mt-0">
+                    <mat-form-field appearance="fill" floatLabel="always" class="me-4">
+                        <mat-label>No of guests</mat-label>
+                        <input matInput type="number" class="example-right-align" placeholder="0"
+                            formControlName="guests">
+                    </mat-form-field>
+                    <mat-form-field appearance="fill" class="me-4" style="width: 210px;">
+                        <mat-label>Arrival Date</mat-label>
+                        <input matInput [matDatepicker]="picker" formControlName="arrivalDate" required>
+                        <mat-hint>MM/DD/YYYY</mat-hint>
+                        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>
+                    <mat-form-field color="accent" appearance="fill" style="width: 210px;">
+                        <mat-label>Departure Date</mat-label>
+                        <input matInput [matDatepicker]="picker2" formControlName="departureDate" required>
+                        <mat-hint>MM/DD/YYYY</mat-hint>
+                        <mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle>
+                        <mat-datepicker #picker2 color="primary"></mat-datepicker>
+                    </mat-form-field>
+
+                </div>
+                <div class="mb-4">
+                    <span class="" style="width: 450px;">
+                        <label>Payment Method :</label>
+                        <mat-radio-group formControlName="paymentMethod">
+                            <mat-radio-button class="me-5 ms-5" value="upi">UPI</mat-radio-button>
+                            <mat-radio-button value="cardPay">Card Payment</mat-radio-button>
+                        </mat-radio-group>
+                    </span>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary w-25" [disabled]="bookingFormData.invalid">Submit</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- <div class="col-4 p-2 shadow-lg rounded-4" style="background-color: #e0c5c5; box-sizing: border-box;">
+            <div class="d-flex flex-column" *ngFor="let hotel of hotelTobeBooked">
+                <div class="p-2" style="height: 300px;"><img src="../../../assets/videos/image.jpg" alt="hotel-image" height="284px"
+                        width="343px"></div>
+                <div class="p-2 border-bottom border-secondary">
+                    <h5>{{hotel.Name}}</h5>
+                </div>
+                <div class="p-2">{{hotel.address}}</div>
+                <div class="p-2">
+                    <h4 class="text-success">{{hotel.price | currency:'INR':'symbol':'4.2-2'}}</h4>
+                </div>
+            </div>
+        </div> -->
+
+    </div>
+</div>

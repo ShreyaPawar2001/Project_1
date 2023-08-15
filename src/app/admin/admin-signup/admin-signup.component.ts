@@ -45,10 +45,10 @@ export class AdminSignupComponent {
   ownerSignup(){
     this.signupForm =this.fb.group({
       name:['',Validators.required],
-      email:['',[]],
-      contact:['',[]],
-      password:['',[]],
-      gender:['',[]]
+      email:['',Validators.required],
+      contact:['',Validators.required],
+      password:['',Validators.required],
+      gender:['',Validators.required]
 
 
 

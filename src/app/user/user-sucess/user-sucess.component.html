@@ -10,7 +10,7 @@
   <div class="background-image image3"></div>
 </div>
 
-<button  mat-raised-button color="primary" (click)="hotelDetails()">Hotel Details</button> &nbsp;
+<button class='hotelDetails' (click)="hotelDetails()">Hotel Details</button> &nbsp;
 <div  class="table-container"  >
   <div class="container p-1" *ngIf="userHotelDetails.length > 0 && showTable" >
     <div class="row">
@@ -23,8 +23,8 @@
       <div class="hotel-card-container">
         <div class="card mb-3"style="max-width: 100%; max-height: 200px" *ngFor="let hotelData of userHotelDetails | searchValue:inputVal">
           <div class="row g-0">
-            <div class="col-md-4 p-1">
-              <img src="../../../assets/videos/image.jpg" width="225px" class="img-fluid rounded-start" alt="hotel">
+            <div class="col-md-2 p-1" >
+              <img src="../../../assets/hotel-list-1.jpg" width="225px" class="img-fluid rounded-start" alt="hotel">
             </div>
             <div class="col-md-6 mt-2">
               <div class="card-body">
@@ -33,12 +33,16 @@
                 </h5>
                 <span class="ms-3"><i class="bi bi-star"></i>{{ hotelData.rating }}</span>
                 <p class="card-text">
-                  <span><h5><i class="bi bi-geo-alt"></i>{{ hotelData.price }}</h5></span>
+                  <span><h5><i class="bi bi-geo-alt"></i>{{ hotelData.address }}</h5></span>
                 </p>
                 <p class="mb-0"><small class="text-muted">{{ hotelData.roomSiz }}</small></p>
                 <p class="mt-0"><small class="text-muted">{{ hotelData.roomDis }}</small></p>
-                <p class="mt-0"><small class="text-muted">{{ hotelData.address }}</small></p>
-                <button class="bookNow" mat-raised-button color="primary" >Book Now</button> 
+                <h3 class="price">{{ hotelData.price |currency: 'INR':'symbol':"1.0-2"}}</h3>
+                <div class="mt-5">
+                  <!-- <h3 class="price">{{hotelData.price }}</h3> -->
+                  <h3><button class='bookNow'(click)="bookNow()" mat-raised-button color="primary" >Book Now</button> </h3>
+              </div>
+                
               </div>
             </div>
           </div>

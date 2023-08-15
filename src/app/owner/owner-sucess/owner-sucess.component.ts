@@ -20,6 +20,7 @@ export class OwnerSucessComponent {
   dataById: any;
   inputVal:any;
   searchboxValue: any;
+  showLogout: boolean=false;
   
 
   ngOnInit(){
@@ -31,6 +32,25 @@ export class OwnerSucessComponent {
 
   constructor(private fb:FormBuilder,private router:Router,private apiCommonServiceService:ApiCommonServiceService,
     private commonService:CommonService){}
+
+    journey(journey:string){
+      this.showLogout = true;
+      if(journey === 'admin'){
+        this.commonService.journey ='admin'
+        this.router.navigateByUrl('admin')
+      }
+      else if(journey === 'owner'){
+        this.commonService.journey ='owner'
+        this.router.navigateByUrl('owner')
+  
+      }
+      else{
+        this.commonService.journey ='user'
+        this.router.navigateByUrl('user')
+  
+      }
+  
+    }
 
   
  

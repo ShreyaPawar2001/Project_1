@@ -15,6 +15,14 @@
       "Password": "1234",
       "Gender": "female",
       "id": 2
+    },
+    {
+      "Name": "",
+      "Email": "",
+      "Contact": "",
+      "Password": "",
+      "Gender": "",
+      "id": 3
     }
   ],
   "owner": [
@@ -86,6 +94,17 @@
       "RommsAvailable": "22",
       "OwnerPassword": "1234",
       "id": 23
+    },
+    {
+      "OwnerName": "Mansi",
+      "OwnerContact": "56877988970",
+      "HotelName": "Mansi",
+      "HotelAddress": "Mumbai",
+      "HotelContact": "57879689",
+      "hotelMenu": "veg/non-veg",
+      "RommsAvailable": "22",
+      "OwnerPassword": "1234",
+      "id": 26
     }
   ],
   "hotelList": [

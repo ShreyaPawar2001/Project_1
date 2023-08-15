@@ -10,6 +10,9 @@ import { ToastrModule } from 'ngx-toastr';
 import {MatSelectModule} from '@angular/material/select';
 import { SearchValuePipe } from '../search-value.pipe';
 import { MatDialogModule } from '@angular/material/dialog';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
  
 
 
@@ -38,7 +41,10 @@ import { MatDialogModule } from '@angular/material/dialog';
     HttpClientModule,
     ToastrModule.forRoot(),
     MatSelectModule,
-    MatDialogModule
+    MatDialogModule,
+    MatRadioModule,
+    MatDatepickerModule,
+    MatNativeDateModule
 
     
    
@@ -52,15 +58,18 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatIconModule,
     FormsModule,
     ReactiveFormsModule,
+    MatRadioModule,
     MatInputModule,
     HttpClientModule,
-    MatSelectModule,
+    MatSelectModule, 
     SearchValuePipe,
-    MatDialogModule
+    MatDialogModule,
+    MatDatepickerModule,
+    MatNativeDateModule
    
    
    
-   
+    
     
     
    

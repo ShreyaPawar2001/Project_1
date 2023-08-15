@@ -1,4 +1,16 @@
-<button  mat-raised-button color="primary" (click)="hotelDetails()">Hotel Details</button> &nbsp;
+<button class="admin" (click)="journey('admin')">
+  Admin
+</button>
+&nbsp; <button class="owner" (click)="journey('owner')">Owner</button> &nbsp;
+<button class="user" (click)="journey('user')">User</button>&nbsp;
+
+<div class="background-container"  autoplay muted loop>
+  <div class="background-image image1"></div>
+  <div class="background-image image2"></div>
+  <div class="background-image image3"></div>
+</div>
+
+<button  class="hotelDetails" (click)="hotelDetails()">Hotel Details</button> &nbsp;
 <!--  Registration form -->
 <div class="form-container" *ngIf="!showTable">
   <form [formGroup]="bookingForm!" class="centered-form">
@@ -145,7 +157,7 @@
   <div class="container p-1s">
     <div class="row">
       <div class="hotel-card-container">
-        <div class="col-md-3" *ngFor="let hotelData of userHotelDetails | searchValue:inputVal">
+        <div class="col-md-13" *ngFor="let hotelData of userHotelDetails | searchValue:inputVal">
           <div class="card mb-3">
             <div class="card-body">
               <h5 class="card-title"><span class="me-5">{{ hotelData.HotelName }}</span></h5>

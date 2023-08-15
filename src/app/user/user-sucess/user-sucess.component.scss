@@ -86,7 +86,7 @@
 
   .bookNow{
     position: relative;
-    left: 561px;
+    left: 847px;
     bottom: 173px;
   }
 
@@ -167,5 +167,22 @@ body, html {
 @keyframes fadeInOut {
   0%, 100% { opacity: 0; }
   20%, 80% { opacity: 1; }
+}
+.price{
+  position: relative;
+  left: 863px;
+  bottom: 130px;
+  color: green;
+  font-size: 24px;
+}
+.hotelDetails{
+  position: relative;
+  right: 415px;
+  bottom: 64px;
+  border-radius: 40px;
+    width: 138px;
+    padding: 9px;
+    z-index: 1;
+    color: #696969;
 }
   

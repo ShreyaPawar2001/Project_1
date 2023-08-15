@@ -12,6 +12,8 @@ export class CommonService {
   forgotPassword!:boolean;
   id!: any;
   dataById: any;
+  selectedHotel!:any
+  apiHotelData: any;
 
   constructor(private toastrService:ToastrService) { }
 

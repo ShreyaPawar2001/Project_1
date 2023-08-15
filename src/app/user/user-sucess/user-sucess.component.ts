@@ -87,12 +87,23 @@ export class UserSucessComponent {
     
 
   }
+  bookNow(){
+    console.log('bookForm');
+    // this.commonService.selectedHotel =this.commonService.apiHotelData.filter((hotel:any)=>{
+    //   return hotel.id ===id
+    // })
+    
+    this.router.navigateByUrl('user/bookingForm')
+  }
+  
   // async deleteHotel(id: number){
   //   await this.apiCommonServiceService.deleteApiCall('hotelBooking',id).toPromise();
   //   this.showTable =!this.showTable;
   //   this.hotelDetails()
   // }
   // editHotel(id:number){}
+
+  
 }
 
 
