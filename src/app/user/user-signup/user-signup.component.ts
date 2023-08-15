@@ -45,7 +45,7 @@ export class UserSignupComponent {
   }
 
 
-
+ 
   ownerSignup(){
     this.signupForm =this.fb.group({
       name:['',Validators.required],

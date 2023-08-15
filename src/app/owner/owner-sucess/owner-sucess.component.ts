@@ -28,7 +28,7 @@ export class OwnerSucessComponent {
     console.log('ngoninit');
     this.userName = this.commonService.name;
     console.log(this.userName); 
-  }
+  } 
 
   constructor(private fb:FormBuilder,private router:Router,private apiCommonServiceService:ApiCommonServiceService,
     private commonService:CommonService){}

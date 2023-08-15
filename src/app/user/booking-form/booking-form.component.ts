@@ -18,7 +18,7 @@ export class BookingFormComponent {
   showLogout: boolean=false;
 
   constructor(private router:Router,private formbuild:FormBuilder,private toaster: ToastrService,private apiCommonServiceService: ApiCommonServiceService,
-    private commonService:CommonService ){}
+    private commonService:CommonService ){} 
 
   ngOnInit(){
     this.settingBookingForm()

@@ -9,7 +9,7 @@ import { SharedModule } from '../shared/shared.module';
 import { OwnerSucessComponent } from './owner-sucess/owner-sucess.component';
 
 
-@NgModule({
+@NgModule({ 
   declarations: [
     OwnerHomeComponent,
     OwnersignupComponent,

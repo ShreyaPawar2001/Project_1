@@ -11,7 +11,7 @@ const routes: Routes = [
   {path:'ownersignup',component:OwnersignupComponent},
   {path:'ownerlogin',component:OwnerLoginComponent},
   {path:'ownersucess',component:OwnerSucessComponent}
-];
+]; 
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

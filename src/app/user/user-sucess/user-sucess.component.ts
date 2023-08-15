@@ -21,7 +21,7 @@ export class UserSucessComponent {
   formShow:any;
   bookingForm!:FormGroup;
 
-  ngOnInit(){
+  ngOnInit(){ 
     
     console.log('ngoninit');
       this.userName=this.commonService.name;

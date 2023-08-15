@@ -7,14 +7,16 @@ import { SharedModule } from '../shared/shared.module';
 import { UserSignupComponent } from './user-signup/user-signup.component';
 import { UserSucessComponent } from './user-sucess/user-sucess.component';
 import { BookingFormComponent } from './booking-form/booking-form.component';
+import { CarouselComponent } from './carousel/carousel.component';
 
 
-@NgModule({
-  declarations: [
+@NgModule({ 
+  declarations: [ 
     UserHomeComponent,
     UserSignupComponent,
     UserSucessComponent,
-    BookingFormComponent
+    BookingFormComponent,
+    CarouselComponent
   ],
   imports: [
     CommonModule,

@@ -23,7 +23,7 @@
                         <mat-label>First Name</mat-label>
                         <input matInput formControlName="fname" required>
                         <mat-error *ngIf="bookingFormData.get('fname')?.errors?.['nospace']">No space
-                            allowed</mat-error>
+                            allowed</mat-error> 
                         <mat-error *ngIf="bookingFormData.get('fname')?.errors?.['required']">You must enter a
                             value</mat-error>
                     </mat-form-field>

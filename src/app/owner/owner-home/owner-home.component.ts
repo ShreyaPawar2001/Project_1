@@ -8,7 +8,7 @@ import { CommonService } from 'src/app/common/common.service';
   selector: 'app-owner-home',
   templateUrl: './owner-home.component.html',
   styleUrls: ['./owner-home.component.scss']
-})
+}) 
 export class OwnerHomeComponent {
   showLogout: boolean=false;
   endpoint!:String;

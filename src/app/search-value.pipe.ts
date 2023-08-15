@@ -11,7 +11,7 @@ export class SearchValuePipe implements PipeTransform {
 
     if(!searchText){          //If there is nthg(bcz ! not is used) inside searchtext it will return the whole cards
       return hotelData;
-    }
+    } 
     let search =searchText.toLowerCase();
     return hotelData.filter((element:any)=>{
       return JSON.stringify(element).toLowerCase().includes(search)

@@ -13,6 +13,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
+// import { CarouselModule } from '@coreui/angular';
  
 
 
@@ -44,7 +45,8 @@ import { MatNativeDateModule } from '@angular/material/core';
     MatDialogModule,
     MatRadioModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    // CarouselModule
 
     
    
@@ -62,10 +64,11 @@ import { MatNativeDateModule } from '@angular/material/core';
     MatInputModule,
     HttpClientModule,
     MatSelectModule, 
-    SearchValuePipe,
+    SearchValuePipe, 
     MatDialogModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    // CarouselModule
    
    
    

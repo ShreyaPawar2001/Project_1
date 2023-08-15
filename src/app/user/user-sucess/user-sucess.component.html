@@ -1,3 +1,5 @@
+
+  
 <button class="admin" (click)="journey('admin')">
   Admin
 </button>
@@ -9,22 +11,23 @@
   <div class="background-image image2"></div>
   <div class="background-image image3"></div>
 </div>
-
+ 
 <button class='hotelDetails' (click)="hotelDetails()">Hotel Details</button> &nbsp;
+<app-carousel></app-carousel>
 <div  class="table-container"  >
   <div class="container p-1" *ngIf="userHotelDetails.length > 0 && showTable" >
     <div class="row">
       <div class="col-10">
         <div class="d-flex justify-content-center"role="search"class="search-container">
           <input class="form-control me-2 w-50"type="text"placeholder="Search" [(ngModel)]="inputVal "aria-label="Search"/>
-        </div>
-      </div>
+        </div> 
+      </div> 
       <div class="col-1"></div>
       <div class="hotel-card-container">
         <div class="card mb-3"style="max-width: 100%; max-height: 200px" *ngFor="let hotelData of userHotelDetails | searchValue:inputVal">
           <div class="row g-0">
             <div class="col-md-2 p-1" >
-              <img src="../../../assets/hotel-list-1.jpg" width="225px" class="img-fluid rounded-start" alt="hotel">
+              <img [src]='hotelData.image' width="225px" class="img-fluid rounded-start" alt="hotel">
             </div>
             <div class="col-md-6 mt-2">
               <div class="card-body">

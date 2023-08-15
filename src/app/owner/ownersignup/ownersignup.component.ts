@@ -8,7 +8,7 @@ import { CommonService } from 'src/app/common/common.service';
   selector: 'app-ownersignup',
   templateUrl: './ownersignup.component.html',
   styleUrls: ['./ownersignup.component.scss']
-})
+}) 
 export class OwnersignupComponent {
   signupForm!:FormGroup;
   submitValue: any;
